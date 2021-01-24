@@ -5,9 +5,10 @@
  * javascript:$.getScript('https://kuna.github.io/capicom_decrypt/loader.js');
  */
 
-function loadScript(src) {
+function loadScript(src, onload) {
     var script = document.createElement('script');
-    script.onload = function () {};
+    if (onload)
+        script.onload = onload;
     script.src = src;
     document.head.appendChild(script);
 }
@@ -19,9 +20,9 @@ if (capicom_elem != undefined) {
     console.log("Capicom ActiveX module detected and removed ...");
 }
 
-loadScript('https://kuna.github.io/capicom_decrypt/misc/rc2.js');
-loadScript('https://kuna.github.io/capicom_decrypt/misc/sha1.js');
-loadScript('https://kuna.github.io/capicom_decrypt/misc/enc-utf16-min.js');
-loadScript('https://kuna.github.io/capicom_decrypt/capicom.js');
-
-console.log("Capicom module successfully loaded.");
+loadScript('https://kuna.github.io/capicom_decrypt/misc/rc2.js', function () {
+loadScript('https://kuna.github.io/capicom_decrypt/misc/sha1.js', function () {
+loadScript('https://kuna.github.io/capicom_decrypt/misc/enc-utf16-min.js', function () {
+loadScript('https://kuna.github.io/capicom_decrypt/capicom.js', function () {
+    console.log("Capicom module successfully loaded.");
+}); }); }); });
