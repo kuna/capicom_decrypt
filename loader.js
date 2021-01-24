@@ -1,8 +1,8 @@
 /**
  * Script usage:
  * 
- * javascript:(!function(){var s=document.createElement("script");s.id="iidxme";s.type="text/javascript";s.src="//iidx.me/loader.js";document.head.appendChild(s);}());
- * javascript:$.getScript('//iidx.me/loader.js');
+ * javascript:(!function(){var s=document.createElement("script");s.id="_capicom";s.type="text/javascript";s.src="https://kuna.github.io/capicom_decrypt/loader.js";document.head.appendChild(s);}());
+ * javascript:$.getScript('https://kuna.github.io/capicom_decrypt/loader.js');
  */
 
 function loadScript(src) {
@@ -12,7 +12,7 @@ function loadScript(src) {
     document.head.appendChild(script);
 }
 
-loadScript('misc/rc2.js');
-loadScript('misc/sha1.js');
-loadScript('misc/enc-utf16-min.js');
-loadScript('capicom.js');
+loadScript('https://kuna.github.io/capicom_decrypt/misc/rc2.js');
+loadScript('https://kuna.github.io/capicom_decrypt/misc/sha1.js');
+loadScript('https://kuna.github.io/capicom_decrypt/misc/enc-utf16-min.js');
+loadScript('https://kuna.github.io/capicom_decrypt/capicom.js');
