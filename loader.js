@@ -12,6 +12,12 @@ function loadScript(src) {
     document.head.appendChild(script);
 }
 
+// remove original capicom object
+var capicom_elem = document.getElementById('capicom');
+if (capicom_elem != undefined) {
+    capicom_elem.parentNode.removeChild(capicom_elem);
+}
+
 loadScript('https://kuna.github.io/capicom_decrypt/misc/rc2.js');
 loadScript('https://kuna.github.io/capicom_decrypt/misc/sha1.js');
 loadScript('https://kuna.github.io/capicom_decrypt/misc/enc-utf16-min.js');
