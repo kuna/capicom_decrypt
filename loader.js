@@ -16,9 +16,12 @@ function loadScript(src) {
 var capicom_elem = document.getElementById('capicom');
 if (capicom_elem != undefined) {
     capicom_elem.parentNode.removeChild(capicom_elem);
+    console.log("Capicom ActiveX module detected and removed ...");
 }
 
 loadScript('https://kuna.github.io/capicom_decrypt/misc/rc2.js');
 loadScript('https://kuna.github.io/capicom_decrypt/misc/sha1.js');
 loadScript('https://kuna.github.io/capicom_decrypt/misc/enc-utf16-min.js');
 loadScript('https://kuna.github.io/capicom_decrypt/capicom.js');
+
+console.log("Capicom module successfully loaded.");

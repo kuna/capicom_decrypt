@@ -59,5 +59,3 @@ function CapicomDecrypter() {
 CAPICOM_SECRET_PASSWORD = 0;
 
 document.capicom = new CapicomDecrypter();
-
-console.log("Capicom module successfully loaded.");
